@@ -3,9 +3,9 @@ function Plant(){
 
   this.w=20; //width
   this.h=random(80,130); //height
-  this.speed = 15;
+  this.speed = 12;
   this.show = function(){
-    fill(200);
+    fill(0);
     noStroke();
     rect(this.x,565-this.h,this.w,this.h);
 

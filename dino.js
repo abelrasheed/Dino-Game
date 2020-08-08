@@ -1,7 +1,7 @@
 function Dino(){
  this.y=550;
  this.x=60;
- this.gravity =.5;
+ this.gravity =1;
  this.velocity=12;
  
  this.show = function(){

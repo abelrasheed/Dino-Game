@@ -2,7 +2,12 @@ var dino;
 var gameOver=0;
 var plants = [];
 var distan =0
+let dino_img
 var count;//Distance b/w plants
+function preload(){
+  dino_img = loadImage("dino.png");
+}
+
 function setup() {
   // put the initial conditions here
   createCanvas(1500,750);
@@ -17,7 +22,7 @@ function draw() {
   // drawing code
 
 
-  background(0);
+  background(255);
   dino.show();
   dino.update();
   fill(0);
@@ -31,13 +36,15 @@ function draw() {
   text("Press space to jump",1200,100);
   text("Distance :",1200,150);
   text(distan,1330,150);
-  count =random(54,56);
-  count =floor(count);
-  console.log(count);
-  if(frameCount % count == 0){
+  
+  if(random(1) < .010 && plants.length < 2){
+   
     plants.push(new Plant());
     distan+=10;
 
+  }
+  if(plants.length == 0){
+    plants.push(new Plant());
   }
   for(var i=plants.length-1; i>=0; i--){
     plants[i].show();
@@ -57,7 +64,7 @@ function draw() {
 function keyPressed(){
   if(key == " "){
      if(dino.y==550){
-      dino.velocity=12;
+      dino.velocity=17;
      }
   }
 }
