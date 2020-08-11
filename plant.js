@@ -1,19 +1,21 @@
-function Plant(){
+class Plant{
+  constructor(){
   this.x= width;
 
-  this.w=20; //width
-  this.h=random(80,130); //height
+  this.w=60; //width
+  this.h=random(90,130); //height
   this.speed = 12;
   this.show = function(){
-    fill(0);
+    fill(200);
     noStroke();
-    rect(this.x,565-this.h,this.w,this.h);
+    image(cactus_img,this.x,565-this.h,this.w,this.h);
 
   }
-  this.update = function(){
+}
+  update(){
     this.x-=this.speed;
   }
-  this.offScreen= function(){
+  offScreen(){
     if(this.x < -this.w){
       return true;
     }else{

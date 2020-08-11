@@ -1,21 +1,22 @@
-function Dino(){
- this.y=550;
- this.x=60;
- this.gravity =1;
- this.velocity=12;
- 
- this.show = function(){
+class Dino {
+constructor(){
+  this.y=415;
+  this.x=60;
+  this.gravity =1.2;
+  this.velocity=12;
+} 
+ show() {
   fill(200,40,60);
-  ellipse(this.x ,this.y, 30, 30);
+  image(dino_img,this.x ,this.y, 250, 150);
  }
 
- this.update =function(){
+ update(){
    this.velocity-=this.gravity;
    this.y-=this.velocity;
 
-   if(this.y>550){
+   if(this.y>415){
      this.velocity=0;
-     this.y=550;
+     this.y=415;
    }
  }
 }
