@@ -25,7 +25,9 @@ function setup() {
 
 function draw() {
   // drawing code
-
+  mainFunc();
+}
+function mainFunc(){
 
   background(bg_img);
   dino.show();
@@ -85,5 +87,12 @@ function keyPressed(){
      if(dino.y==415){
       dino.velocity=21;
      }
+  }
+
+  if(key == "r"){
+  distan = 0;
+  plants = [];
+  mainfunc();
+  loop();
   }
 }
