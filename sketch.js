@@ -55,11 +55,11 @@ function mainFunc(){
     count = 0;
     } 
   }
-  if(plants.length == 0){
+  // if(plants.length == 0){
  
-    count = 0;
-    plants.push(new Plant());
-  }
+  //   count = 0;
+  //   plants.push(new Plant());
+  // }
   for(var i=plants.length-1; i>=0; i--){
     plants[i].show();
 
@@ -71,7 +71,7 @@ function mainFunc(){
 
      text("GAME OVER",500,350);
      textSize(35);
-     text("F5 to restart",600,400);
+     text("R to restart",600,400);
      
      noLoop();     
     }    
@@ -92,7 +92,7 @@ function keyPressed(){
   if(key == "r"){
   distan = 0;
   plants = [];
-  mainfunc();
   loop();
+  mainfunc();
   }
 }
